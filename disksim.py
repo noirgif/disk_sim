@@ -1,6 +1,6 @@
 from access import DiskAccess
 from math import trunc, ceil
-from LRU import LRU
+from util.LRU import LRU
 import heapq
 
 class Disk:

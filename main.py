@@ -2,7 +2,7 @@
 
 from disksim import Cache
 from workload import MostRecentWorkload, MixedRWWorkload, CustomWorkload, mix_rw, uniform_workload
-from size import size
+from util.size import size
 from math import ceil
 
 block_size = size(K=32)

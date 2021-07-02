@@ -1,5 +1,5 @@
 from math import trunc
-from size import size
+from util.size import size
 from access import DiskAccess
 import random
 from math import trunc
@@ -152,7 +152,7 @@ class MostRecentWorkload(Workload):
         self.workload0 = workload0
         self.n = n
         try:
-            from zipfiangen import ZipfianGenerator
+            from util.zipfiangen import ZipfianGenerator
             self.zipfiangen = ZipfianGenerator(n=n, a=a)
         except ImportError:
             print("Most recent workload needs zipfian generator!")
