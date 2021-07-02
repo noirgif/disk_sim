@@ -23,8 +23,9 @@ def diskAccess2Blocks(diskAccess, block_size):
     return tuple(range(start, last))
 
 
-class Cache:
+class Cache(Disk):
     def __init__(self, block_size, cache_size) -> None:
+        super().__init__()
         self.visited = LRU(cache_size)
         self.block_size = block_size
         self.cache_size = cache_size
@@ -51,7 +52,7 @@ class Cache:
 
 
 if __name__ == '__main__':
-    from size import size
+    from util.size import size
     diskaccesses = [DiskAccess(pos=size(K=64), length=size(K=4)), 
         DiskAccess(pos=size(K=65), length=size(K=4)),
         DiskAccess(pos=size(K=128), length=size(K=64))]
