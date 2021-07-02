@@ -8,3 +8,5 @@ Files:
         - `LRU`: a LRU cache
         - `size`: the `size` function provides a way to write human-readable sizes for disks
         - `zipfiangen`: a random generator that samples recent entries more often
+
+- `main` an example demonstrating how everything works
